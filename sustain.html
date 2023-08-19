@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            /* outline:1px solid greenyellow; */
+        }
+        body{
+            background:rgb(245 254 255);
+        }
+        html{
+            /* color-scheme: light dark; */
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px;
+        }
+        ::-webkit-scrollbar {
+            width: 7px;
+           
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+       
+       
+
+    .ban-img-body{
+        animation: 8s ban-animate linear infinite;
+    }
+
+    @keyframes ban-animate{
+        0%{
+           transform: translateX(0);
+        }
+        30%{
+            transform: translateX(0);
+        }
+        35%{
+            transform: translateX(-25%);
+        }
+        65%{
+            transform: translateX(-25%);
+        }
+        70%{
+            transform: translateX(-50%);
+        }
+        95%{
+             transform: translateX(-50%);
+        }
+        100%{
+             transform: translateX(-75%);
+        }
+    }
+
+    .mySwiper .swiper-wrapper{
+        transition-timing-function: linear;
+      }
+      
+    .sec-three{
+        animation:20s secThreeback linear infinite;
+    }
+    
+    @keyframes secThreeback{
+        0%{
+            background-image: url(import/b11.png);
+        }
+        20%{
+            background-image: url(import/b11.png);
+        }
+        25%{
+            background-image: url(import/b12.png);
+        }
+        45%{
+            background-image: url(import/b12.png);
+        }
+        50%{
+            background-image: url(import/b13.png);
+        }
+        70%{
+            background-image: url(import/b13.png);
+        }
+        75%{
+            background-image: url(import/b14.png);
+        }
+        95%{
+            background-image: url(import/b14.png);
+        }
+        100%{
+            background-image: url(import/b11.png);
+        }
+    }
+ 
+    .sus-slider-one{
+        animation:10s sus-one linear infinite;
+    }
+    @keyframes sus-one{
+        0%{
+            transform: translateX(0%);
+        }
+        20%{
+            transform: translateX(0%);
+        }
+        25%{
+            transform: translateX(-20%);
+        }
+        45%{
+            transform: translateX(-20%);
+        }
+        50%{
+            transform: translateX(-40%);
+        }
+        70%{
+            transform: translateX(-40%);
+        }
+        75%{
+            transform: translateX(-60%);
+        }
+        95%{
+            transform: translateX(-60%);
+        }
+        100%{
+            transform: translateX(-80%);
+        }
+    }
+    .sus-slider-two{
+       animation:10s sus-two linear infinite;
+    }
+    @keyframes sus-two{
+        0%{
+            transform: translateX(0%);
+        }
+        20%{
+            transform: translateX(0%);
+        }
+        25%{
+           transform: translateX(-25%);
+        }
+        45%{
+            transform: translateX(-25%);
+        }
+        50%{
+            transform: translateX(-50%);
+        }
+        70%{
+            transform: translateX(-50%);
+        }
+        75%{
+            transform: translateX(-75%);
+        }
+        100%{
+            transform: translateX(-75%);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="relative">
+        <div class="text-xs flex justify-center h-[70px] items-center fixed w-full bg-teal-50 font-['Arial'] px-[5%] z-50">
+            <div class="hidden md:flex gap-5 items-center">
+               <a href="#about" class="text-black p-[10px] hover:text-[#ff6600]">ABOUT ME</a>
+               <a href="#education" class="text-black p-[10px] hover:text-[#ff6600]">EDUCATION</a>
+               <a href="#skills" class="text-black p-[10px] hover:text-[#ff6600]">SKILLS</a>
+               <a href="#project" class="text-black p-[10px] hover:text-[#ff6600]">PROJECT</a>
+               <a href="#contest" class="text-black p-[10px] hover:text-[#ff6600]">CONTEST</a>
+            </div>
+            <div class="h-[40px] w-[25px] justify-center items-center flex md:hidden" id="menu">
+                <ion-icon name="list-outline" class="text-white w-full h-full"></ion-icon>
+            </div>
+        </div>
+            <a href="contact.html" class="contact-btn bg-[#545454] px-[20px] py-[10px] rounded-md text-white font-semibold">CONTACT</a>
+        <div class="hidden md:hidden flex-col w-full items-center gap-5 py-5 fixed bg-[#333333] top-[60px] z-50 font-[Arial]" id="drop">
+            <a href="about.html" class="text-sm text-white">ABOUT US</a>
+            <a href="" class="text-sm text-white">SUSTAINABILITY</a>
+            <a href="Inovation.html" class="text-sm text-white">INOVATION</a>
+             <a href="" class="nav-list-item">PRODUCTS</a>
+            <a href="career.html" class="text-sm text-white">CAREER</a>
+            <a href="contact.html" class="text-sm text-white">CONTACT</a>
+        </div>
+    </div>
+    <div class="w-full h-screen flex pt-[40px] px-[10%] bg-white items-center" id="about">
+        <div class="w-1/2">
+            <h1 class="text-4xl text-black">I am </h1>
+            <p class="text-4xl font-bold text-black">TANJILA CHOWDHURY ORPE</p>
+            <p  class="text-4xl text-black">Guest Lecturer of CSE Dept. <br>DIIT
+           </p>
+        </div>
+        <div class="w-1/2 h-full flex justify-end">
+            <img src="import/orpe.jpeg" alt="" class="h-full">
+        </div>
+    </div>
+  
+    <div class="px-[5%] text-center py-[50px]" id="education">
+        <h1 class="pb-[50px] lg:text-4xl xl:text-5xl 2xl:text-7xl text-3xl font-normal" data-aos="fade-right">Education  <span class="text-[#ff3e5e]">Qualification</span></h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]" data-aos="zoom-in">
+            <div class="px-[20px] pt-[30px] pb-[20px] bg-white border border-inherit rounded-[5px] transition ease-linear duration-300 hover:translate-y-[-20px]">
+                <h3 class="mb-[10px] text-[25px] font-medium text-black">M.Sc</h3>
+                <img src="import/edu1.jfif" alt="" class="max-h-[150px] max-w-[150px] m-auto">
+                <p class="text-sm text-center pt-[10px] text-black">Jahangirnagar University (JU)
+                </p>
+                <p class="text-[15px] text-center pt-[10px] text-black">Passing Year : Running
+                </p>
+            </div>
+            <div class="px-[20px] pt-[30px] pb-[20px] bg-white border border-inherit rounded-[5px] transition ease-linear duration-300 hover:translate-y-[-20px]">
+                <h3 class="mb-[10px] text-[25px] font-medium text-black">B.Sc</h3>
+                <img src="import/edu3.jpeg" alt="" class="max-h-[80px] max-w-[80px] m-auto">
+                <p class="text-sm text-center pt-[10px] text-black">Daffodil Institute of IT (DIIT)
+                </p>
+                <p class="text-[15px] text-center pt-[10px] text-black">CGPA : 3.46
+                </p>
+                <p class="text-[15px] text-center pt-[10px] text-black">Passing Year : 2020
+                </p>
+            </div>
+            <div class="px-[20px] pt-[30px] pb-[20px] bg-white border border-inherit rounded-[5px] transition ease-linear duration-300  hover:translate-y-[-20px] ">
+                <h3 class="mb-[10px] text-[25px] font-medium text-black">HSC</h3>
+                <img src="import/edu2.jpeg" alt="" class="max-h-[80px] max-w-[80px] m-auto">
+                <p class="text-sm text-center pt-[10px] text-black">Shamshul Haque Khan School and College
+                </p>
+                <p class="text-[15px] text-center pt-[10px] text-black">GPA : 5.00
+                </p>
+                <p class="text-[15px] text-center pt-[10px] text-black">Passing Year : 2016
+                </p>
+            </div>
+            <div class="px-[20px] pt-[30px] pb-[20px] bg-white border border-inherit rounded-[5px] transition ease-linear duration-300  hover:translate-y-[-20px] ">
+                <h3 class="mb-[10px] text-[25px] font-medium text-black">SSC</h3>
+                <img src="import/edu2.jpeg" alt="" class="max-h-[80px] max-w-[80px] m-auto">
+                <p class="text-sm text-center pt-[10px] text-black">Shamshul Haque Khan School and College
+                </p>
+                <p class="text-[15px] text-center pt-[10px] text-black">GPA : 5.00
+                </p>
+                <p class="text-[15px] text-center pt-[10px] text-black">Passing Year : 2014
+                </p>
+            </div>
+            
+            
+        </div>
+    </div>
+    <h1 class="pt-[50px] lg:text-4xl xl:text-5xl 2xl:text-7xl text-3xl font-normal text-center" id="skills">SKILLS</h1>
+    <div class="w-full py-[50px] md:px-[10%] flex flex-col-reverse md:flex-row gap-10 justify-center ">
+        <div class="w-full md:w-1/3">
+            <h1 class="text-3xl pl-3 border-l-4 border-l-[#ff6600] text-black mb-5 font-light">Programming <br> Language</h1>
+            <div class="mt-[30px] pl-4">
+                <li class="list-disc text-black">C</li>
+                <li class="list-disc text-black">C++</li>
+                <li class="list-disc text-black">JAVA</li>
+                <li class="list-disc text-black">JavaScript</li>
+            </div>
+        </div>
+        <div class="w-full md:w-1/3">
+            <h1 class="text-3xl pl-3 border-l-4 border-l-[#ff6600] text-black mb-5 font-light">Development <br> Skills</h1>
+            <div class="mt-[30px] pl-4">
+                <li class="list-disc text-black">HTML</li>
+                <li class="list-disc text-black">CSS</li>
+                <li class="list-disc text-black">Tailwind</li>
+                <li class="list-disc text-black">Bootstrap</li>
+            </div>
+        </div>
+        <div class="w-full md:w-1/3">
+            <h1 class="text-3xl pl-3 border-l-4 border-l-[#ff6600] text-black mb-5 font-light">Computer <br>Skills</h1>
+            <div class="mt-[30px] pl-4">
+                <li class="list-disc text-black">MS Word</li>
+                <li class="list-disc text-black">MS PowerPoint</li>
+                <li class="list-disc text-black">MS Excel</li>
+            </div>
+        </div>
+    </div>
+    <div  class="bg-white">
+        <h1 class="pt-16 lg:text-4xl xl:text-5xl 2xl:text-7xl text-3xl font-normal  text-center text-black" id="project">My <span class="text-[#ff3e5e]">Projects</span></h1>
+        <div class="reveal shoccho px-[5%] lg:py-12" id="shoccho">
+            <h1 class="text-center font-bold text-3xl text-black">Travel Agency Website</h1>
+            <P class="w-1/2 text-center text-lg font-normal py-5 m-auto">Build This site for a Client. It is a site for an agency where owener can post the price and give latest update. I have Build the front-end  part with Vue3 only the hero portion is add as an image for confidentiality</P>
+            <div class="w-full  flex  flex-col  items-center lg:flex-row lg:gap-14">
+                <div class="w-2/5 flex items-center">
+                    <img src="import/pro1.PNG" alt="" class="w-full"/>
+                </div>
+                <div class="py-5 w-3/5 grid gap-y-[0px] gap-x-[60px] grid-cols-1 md:grid-cols-2 pl-[30px] lg:pl-0">
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">Tour Pakege</h3>
+                        <p class="w-full text-left text-[15px] text-black">Anyone can see the upcomming tour page and the destination</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">No More Search</h3>
+                        <p class="w-full text-left text-[15px] text-black">Any one can find their fovourite destination on the site and book for trips</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black"> Flexibility and Scalability</h3>
+                        <p class="w-full text-left text-[15px] text-black">Every travel agency and every other kind of business for that matter is individually unique in terms of its size, demands, and business operations.</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">Reservation Management</h3>
+                        <p class="w-full text-left text-[15px] text-black">One of the most important features that your travel agency software will need to have is reservation management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal ledge px-[5%] lg:py-12" id="ledge">
+            <h1 class="text-center font-bold text-3xl">Restaurant Website</h1>
+            <P class="w-1/2 text-center text-lg font-normal py-5 m-auto">Build This site for a Client. It is a site for an restaurant where owener can post the price and give latest update. I have Build the front-end  part with Vue3 only the hero portion is add as an image for confidentiality</P>
+            <div class="w-full  flex flex-col-reverse  items-center lg:flex-row lg:gap-10">
+                <div class="w-3/5 grid grid-cols-1 md:grid-cols-2 py-10 pl-[30px] gap-x-10">
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3">Better The Photography, Higher The Sales </h3>
+                        <p class="w-full text-left text-[15px]">A detailed menu page is undoubtedly one of the most crucial features of a restaurant website.</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3">Social Media Integration </h3>
+                        <p class="w-full text-left text-[15px]">According to Statista, the millennial generation has a population of 72 million individuals, making it a significant buying group.</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3">Order Now Button</h3>
+                        <p class="w-full text-left text-[15px]">A decade or two ago, people used to have to place orders over the phone or drive to restaurants for take-outs, then wait for the meal to be prepared and delivered.</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3">Carefree Reservations </h3>
+                        <p class="w-full text-left text-[15px]">Online bookings are a must-have for any restaurant website, as foodies increasingly rely on the internet for information.</p>
+                    </div>
+                </div>
+
+                <div class="w-2/5 flex flex-col items-center xl:items-end gap-5">
+                    <img src="import/pro2.PNG" alt="" class="w-full mt-7"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal prefeex px-[5%] lg:py-12" id="pfx">
+            <h1 class="text-center font-bold text-3xl text-black">Company Portfolio</h1>
+            <P class="w-1/2 text-center text-lg font-normal py-5 m-auto">Build This site for a Client. It is a site for a company where owener can post the price and give latest update. I have Build the front-end  part with Vue3 only the hero portion is add as an image for confidentiality</P>
+            <div class="w-full  flex  flex-col  items-center lg:flex-row lg:gap-14">
+                <div class="w-2/5 flex flex-col gap-5 items-center xl:items-start">
+                    <img src="import/pro3.PNG" alt="" class="w-full"/>
+                </div>
+                <div class="w-3/5 grid gap-y-[0px] gap-x-[60px] grid-cols-1 md:grid-cols-2 pl-[30px] lg:pl-[30px]">
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">A High-Quality Image of Yourself</h3>
+                        <p class="w-full text-left text-[15px] text-black">Your Image help clients connect with you better if you share a picture of yourself on your website.</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">Information About Yourself</h3>
+                        <p class="w-full text-left text-[15px] text-black">As any official education/training, awards, and recognition you’ve picked up along the way</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">Services</h3>
+                        <p class="w-full text-left text-[15px] text-black">Sure, you may be a photographer or a web designer, but those likely aren’t the only services you provide to your customers</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">Testimonials</h3>
+                        <p class="w-full text-left text-[15px] text-black">You should get into the habit of requesting a testimonial from every client you work with.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal ledge px-[5%] lg:py-12" id="ledge">
+            <h1 class="text-center font-bold text-3xl">Accounting Software</h1>
+            <P class="w-1/2 text-center text-lg font-normal py-5 m-auto">Build This software for a Client. It is a site for an accounting where owener can post the price and give latest update. I have Build the front-end  part with Vue3 only the hero portion is add as an image for confidentiality</P>
+            <div class="w-full  flex flex-col-reverse  items-center lg:flex-row lg:gap-14">
+                <div class="w-3/5 grid grid-cols-1 md:grid-cols-2 py-10 pl-[30px] gap-x-10">
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3">Organized</h3>
+                        <p class="w-full text-left text-[15px]">We offer low fees and fast execution times, so you can make the most of it.</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3">Zero Human Error</h3>
+                        <p class="w-full text-left text-[15px]">We offer low fees and fast execution times, so you can make the most of it.</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3">Easy to access</h3>
+                        <p class="w-full text-left text-[15px]">We offer low fees and fast execution times, so you can make the most of it.</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3">Personalization</h3>
+                        <p class="w-full text-left text-[15px]">We offer low fees and fast execution times, so you can make the most of it.</p>
+                    </div>
+                </div>
+
+                <div class="w-2/5 flex flex-col items-center xl:items-end gap-5">
+                    <img src="import/pro4.PNG" alt="" class="w-full mt-7"/>
+                </div>
+            </div>
+        </div>
+        <div class="reveal prefeex px-[5%] xl:py-12" id="pfx">
+            <h1 class="text-center font-bold text-3xl text-black">Internship Portal</h1>
+            <P class="w-1/2 text-center text-lg font-normal py-5 m-auto">Build This site for a Client. It is a site for an  where owener can post the price and give latest update. I have Build the front-end  part with Vue3 only the hero portion is add as an image for confidentiality</P>
+            <div class="w-full  flex  flex-col  items-center lg:flex-row lg:gap-14">
+                <div class="w-2/5 flex flex-col gap-5 items-center xl:items-start">
+                    <img src="import/po5.jpeg" alt="" class="w-full"/>
+                </div>
+                <div class="w-3/5 grid gap-y-[0px] gap-x-[60px] grid-cols-1 md:grid-cols-2 pl-[30px] lg:pl-[30px]">
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">Early Job placement</h3>
+                        <p class="w-full text-left text-[15px] text-black">Intern can find their fevorable easily.Helps them tostart their carrer fast</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">Auto CV Making & download</h3>
+                        <p class="w-full text-left text-[15px] text-black">Intern can make their own CV. and emploeer can download or see the cv of the candidates </p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">Multiple Use SignUp</h3>
+                        <p class="w-full text-left text-[15px] text-black">Multiple user can sign up with this website and see what is requried for better job</p>
+                    </div>
+                    <div class="py-5 px-[30px] items-center relative rounded-[8px]">
+                        <img src="import/feature.png" alt="" class="h-10 w-10 p-[5px] absolute top-[35px] left-[-30px] shadow-xl transition linear duration-300 rounded-full hover:scale-150"/>
+                        <h3 class=" text-lg mb-3 text-black">Dynamic Site Setting</h3>
+                        <p class="w-full text-left text-[15px] text-black">The updates on this site is dynamic each userhapp their own profile which they can to their desire </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="py-[50px] lg:text-4xl xl:text-5xl 2xl:text-7xl text-3xl font-normal text-center" id="contest">CONTESTS</h1>
+    <div class="w-full px-[5%] py-10 flex">
+        <div class="w-1/2">
+            <h1 class="text-3xl pl-3 border-l-4 border-l-[#ff6600] text-black mb-5 font-light">Contest List</h1>
+            <li class="list-disc text-black">22nd ICPC Dhaka regional -2018</li>
+            <li class="list-disc text-black">National girl’s Programming Contest (NGPC) in DIU -2018</li>
+            <li class="list-disc text-black">National girl’s Programming Contest (NGPC) in DIU -2019</li>
+            <li class="list-disc text-black">National girl’s Programming Contest (NGPC) in NSU -2019</li>
+            <li class="list-disc text-black">BUP TECHSURGENCE in BUP -2019</li>
+            <li class="list-disc text-black">IUB EEE Day in IUB -2019</li>
+        </div>
+        <div class="w-1/2 grid grid-cols-3 gap-5">
+            <img src="import/con1.jpeg" alt="">
+            <img src="import/con2.jpeg" alt="">
+            <img src="import/con3.jpeg" alt="">
+            <img src="import/con4.jpeg" alt="">
+            <img src="import/con5.jpeg" alt="">
+        </div>
+    </div>
+
+    <h1 class="pt-[50px] lg:text-4xl xl:text-5xl 2xl:text-7xl text-3xl font-normal text-center">FUTURE PLANS FOR DIIT</h1>
+    <div class="w-full py-[50px] md:px-[10%] flex flex-col-reverse md:flex-row gap-10 justify-center ">
+        <div class="w-full md:w-1/3">
+            <h1 class="text-3xl pl-3 border-l-4 border-l-[#ff6600] text-black mb-5 font-light">Mentorship <br> Program</h1>
+            <div class="mt-[30px] pl-4">
+                <li class="list-disc text-black">Assign a mentor for every student</li>
+                <li class="list-disc text-black">Provide mentor for specific carrer</li>
+                <li class="list-disc text-black">Organize workshop for develpment</li>
+                <li class="list-disc text-black">Develop communication skills</li>
+                <li class="list-disc text-black">Build a good relation between mentor and student</li>
+            </div>
+        </div>
+        <div class="w-full md:w-1/3">
+            <h1 class="text-3xl pl-3 border-l-4 border-l-[#ff6600] text-black mb-5 font-light">Digital <br> Classroom</h1>
+            <div class="mt-[30px] pl-4">
+                <li class="list-disc text-black">All lectures are available in google class room</li>
+                <li class="list-disc text-black">Provide video material of lecture</li>
+                <li class="list-disc text-black">If student cannot attend class they can find the lecture as a video</li>
+                <li class="list-disc text-black">If student is unable to understand the lecture in class they can ask for help through online class</li>
+            </div>
+        </div>
+        <div class="w-full md:w-1/3">
+            <h1 class="text-3xl pl-3 border-l-4 border-l-[#ff6600] text-black mb-5 font-light">Programming <br>Knowledge</h1>
+            <div class="mt-[30px] pl-4">
+                <li class="list-disc text-black">Prepare student to perticipate in every national code fest</li>
+                <li class="list-disc text-black">Arrange internal coding contest in DIIT</li>
+                <li class="list-disc text-black">Make student familiar with programming langaugae that are essential for jobs</li>
+                <li class="list-disc text-black">Arrange contest between unversities</li>
+            </div>
+        </div>
+    </div>
+  
+
+    <div class="px-[5%] py-[40px] bg-teal-100  flex flex-col md:flex-row items-center justify-between text-[15px] gap-y-5">
+        <h1 class="text-lg text-black font-semibold">Tanjila Chowdhury Orpe</h1>
+       
+        <div class="flex gap-[10px]">
+            <a href=""><img src="import/f1.png" alt="" class="hover:bg-[#ff6600] rounded-full w-6"></a>
+            <a href=""><img src="import/f3.png" alt="" class="hover:bg-[#ff6600] rounded-full w-6"></a>
+            <a href=""><img src="import/f2.png" alt="" class="hover:bg-[#ff6600] rounded-full w-6"></a>
+        </div>
+    </div>
+    
+</body>
+</html>
